@@ -11,3 +11,12 @@ int main() {
         printf("Enter Arrival Time and Burst Time for P%d: ", i + 1);
         scanf("%d%d", &at[i], &bt[i]);
     }
+
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (at[i] > at[j]) {
+                int temp = at[i]; at[i] = at[j]; at[j] = temp;
+                temp = bt[i]; bt[i] = bt[j]; bt[j] = temp;
+            }
+        }
+    }
