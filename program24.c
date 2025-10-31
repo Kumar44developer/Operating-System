@@ -20,3 +20,29 @@ int main() {
             }
         }
     }
+ // Calculate Completion, Turnaround, Waiting Times
+    ct[0] = at[0] + bt[0];
+    for (int i = 1; i < n; i++) {
+        if (at[i] > ct[i - 1]) // CPU idle
+            ct[i] = at[i] + bt[i];
+        else
+            ct[i] = ct[i - 1] + bt[i];
+    }
+
+    for (int i = 0; i < n; i++) {
+        tat[i] = ct[i] - at[i];
+        wt[i] = tat[i] - bt[i];
+        awt += wt[i];
+        atat += tat[i];
+    }
+
+
+
+
+
+
+
+
+
+
+
