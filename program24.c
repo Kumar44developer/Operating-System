@@ -20,10 +20,9 @@ int main() {
             }
         }
     }
- // Calculate Completion, Turnaround, Waiting Times
     ct[0] = at[0] + bt[0];
     for (int i = 1; i < n; i++) {
-        if (at[i] > ct[i - 1]) // CPU idle
+        if (at[i] > ct[i - 1]) 
             ct[i] = at[i] + bt[i];
         else
             ct[i] = ct[i - 1] + bt[i];
@@ -35,7 +34,16 @@ int main() {
         awt += wt[i];
         atat += tat[i];
     }
+ printf("\nProcess\tArrival\tBurst\tWaiting\tTurnaround\tCompletion\n");
+    for (int i = 0; i < n; i++) {
+        printf("P%d\t%d\t%d\t%d\t%d\t\t%d\n", i + 1, at[i], bt[i], wt[i], tat[i], ct[i]);
+    }
 
+    printf("\nAverage Waiting Time: %.2f", awt / n);
+    printf("\nAverage Turnaround Time: %.2f\n", atat / n);
+
+    return 0;
+}
 
 
 
