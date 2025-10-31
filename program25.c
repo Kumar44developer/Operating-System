@@ -29,7 +29,32 @@ int main() {
             ct[i] = ct[i - 1] + bt[i];
     }
 
+printf("\nGantt Chart:\n ");
+    for (int i = 0; i < n; i++) printf("-------");
+    printf("\n|");
+    for (int i = 0; i < n; i++) printf(" P%d |", i + 1);
+    printf("\n ");
+    for (int i = 0; i < n; i++) printf("-------");
 
+    printf("\n0");
+    for (int i = 0; i < n; i++) printf("     %d", ct[i]);
+
+    for (int i = 0; i < n; i++) {
+        tat[i] = ct[i] - at[i];
+        wt[i] = tat[i] - bt[i];
+        awt += wt[i];
+        atat += tat[i];
+    }
+
+    printf("\n\nProcess\tArrival\tBurst\tWaiting\tTurnaround\tCompletion\n");
+    for (int i = 0; i < n; i++)
+        printf("P%d\t%d\t%d\t%d\t%d\t\t%d\n", i + 1, at[i], bt[i], wt[i], tat[i], ct[i]);
+
+    printf("\nAverage Waiting Time: %.2f", awt / n);
+    printf("\nAverage Turnaround Time: %.2f\n", atat / n);
+
+    return 0;
+}
 
 
 
