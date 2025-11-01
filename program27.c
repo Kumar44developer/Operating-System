@@ -31,3 +31,25 @@ int main() {
         awt += wt[i];
         atat += tat[i];
     }
+   printf("\nProcess\tBurst Time\tWaiting Time\tTurnaround Time\n");
+    for (int i = 0; i < n; i++)
+        printf("P%d\t\t%d\t\t%d\t\t%d\n", p[i], bt[i], wt[i], tat[i]);
+
+    printf("\nAverage Waiting Time: %.2f", awt / n);
+    printf("\nAverage Turnaround Time: %.2f\n", atat / n);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
