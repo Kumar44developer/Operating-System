@@ -31,3 +31,14 @@ int main() {
             ct[i] = ct[i - 1] + bt[i];
         }
     }
+
+    for (int i = 0; i < n; i++) {
+        tat[i] = ct[i] - at[i];
+        wt[i] = tat[i] - bt[i];
+        awt += wt[i];
+        atat += tat[i];
+    }
+
+
+
+
