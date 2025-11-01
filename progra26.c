@@ -39,6 +39,20 @@ int main() {
         atat += tat[i];
     }
 
+int total_time = ct[n - 1] - at[0];
+    cpu_utilization = ((float)(total_time - total_idle) / total_time) * 100.0;
 
+    printf("\nProcess\tAT\tBT\tCT\tTAT\tWT\n");
+    for (int i = 0; i < n; i++) {
+        printf("P%d\t%d\t%d\t%d\t%d\t%d\n", i + 1, at[i], bt[i], ct[i], tat[i], wt[i]);
+    }
+
+    printf("\nAverage Waiting Time: %.2f", awt / n);
+    printf("\nAverage Turnaround Time: %.2f", atat / n);
+    printf("\nCPU Utilization: %.2f%%", cpu_utilization);
+    printf("\nThroughput: %.2f processes/unit time\n", (float)n / total_time);
+
+    return 0;
+}
 
 
