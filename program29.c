@@ -35,3 +35,7 @@ int main() {
         completed[min_index] = 1;
         count++;
     }
+ for (int i = 0; i < n; i++) {
+        awt += wt[i];
+        atat += tat[i];
+    }
