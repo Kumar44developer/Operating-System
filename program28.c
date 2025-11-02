@@ -23,3 +23,26 @@ int main() {
             }
         }
     }
+
+ wt[0] = 0;
+    for (int i = 1; i < n; i++)
+        wt[i] = wt[i - 1] + bt[i - 1];
+
+    for (int i = 0; i < n; i++) {
+        tat[i] = bt[i] + wt[i];
+        awt += wt[i];
+        atat += tat[i];
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
