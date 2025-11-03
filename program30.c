@@ -37,3 +37,19 @@ int main() {
         completed[index] = 1;
         count++;
     }
+ printf("|\n");
+
+    for (int i = 0; i < n; i++) {
+        awt += wt[i];
+        atat += tat[i];
+    }
+
+    printf("\nProcess\tAT\tBT\tCT\tTAT\tWT\n");
+    for (int i = 0; i < n; i++)
+        printf("P%d\t%d\t%d\t%d\t%d\t%d\n", i + 1, at[i], bt[i], ct[i], tat[i], wt[i]);
+
+    printf("\nAverage Waiting Time: %.2f", awt / n);
+    printf("\nAverage Turnaround Time: %.2f\n", atat / n);
+
+    return 0;
+}
