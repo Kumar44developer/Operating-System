@@ -15,3 +15,29 @@ int main() {
         scanf("%d%d", &at[i], &bt[i]);
         rt[i] = bt[i];
     }
+  while (completed != n) {
+        minm = INT_MAX;
+        for (int j = 0; j < n; j++) {
+            if (at[j] <= t && rt[j] > 0 && rt[j] < minm) {
+                minm = rt[j];
+                shortest = j;
+                check = 1;
+            }
+        }
+
+        if (check == 0) {
+            t++;
+            continue;
+        }
+
+        rt[shortest]--;
+        if (rt[shortest] == 0) {
+            completed++;
+            check = 0;
+            finish_time = t + 1;
+            ct[shortest] = finish_time;
+            tat[shortest] = ct[shortest] - at[shortest];
+            wt[shortest] = tat[shortest] - bt[shortest];
+        }
+        t++;
+    }
