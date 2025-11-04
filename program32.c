@@ -6,3 +6,10 @@ int main() {
     pipe(pipefd);
 
     pid_t pid = fork();
+
+    if (pid == 0) {
+        close(pipefd[1]); 
+        char buffer[100];
+        read(pipefd[0], buffer, sizeof(buffer));
+        printf("Child received: %s\n", buffer);
+        close(pipefd[0]);
