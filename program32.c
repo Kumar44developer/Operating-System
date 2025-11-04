@@ -19,3 +19,7 @@ int main() {
         write(pipefd[1], msg, strlen(msg) + 1);
         close(pipefd[1]);
     }
+
+    return 0;
+}
+ 
