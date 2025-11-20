@@ -14,3 +14,7 @@ int wait(int s) {
 int signal(int s) {
     return (++s);
 }
+void producer() {
+    mutex = wait(mutex);
+    full = signal(full);
+    empty = wait(empty);
