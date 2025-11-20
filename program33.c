@@ -57,9 +57,16 @@ while (1) {
                 else
                     printf("\nBuffer is EMPTY! Consumer cannot consume.");
                 break;
-            ase 3:
+            case 3:
                 printf("\nExiting...\n");
                 exit(0);
+            default:
+                printf("\nInvalid choice!");
+        }
+    }
+
+    return 0;
+}
 
 
 
