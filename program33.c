@@ -28,7 +28,12 @@ void consumer() {
     mutex = wait(mutex);
     full = wait(full);
     empty = signal(empty);
+    
+    printf("\nConsumer consumes item %d", x);
+    x--;
 
+    mutex = signal(mutex);
+}
 
 
 
