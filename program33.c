@@ -39,6 +39,18 @@ int main() {
     int choice;
 
     printf("\n--- Producer Consumer Simulation (Semaphore) ---");
+while (1) {
+        printf("\n\n1. Produce\n2. Consume\n3. Exit");
+        printf("\nEnter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                if (mutex == 1 && empty != 0)
+                    producer();
+                else
+                    printf("\nBuffer is FULL! Producer cannot produce.");
+                break;
 
 
 
