@@ -35,6 +35,10 @@ void consumer() {
     mutex = signal(mutex);
 }
 
+int main() {
+    int choice;
+
+    printf("\n--- Producer Consumer Simulation (Semaphore) ---");
 
 
 
