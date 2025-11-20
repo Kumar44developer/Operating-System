@@ -6,4 +6,7 @@ int full = 0;
 int empty = 3;  
 int x = 0;    
 
+int wait(int s) {
+    return (--s);
+}
 
