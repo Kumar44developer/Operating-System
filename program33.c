@@ -23,3 +23,23 @@ void producer() {
 
     mutex = signal(mutex);
 }
+
+void consumer() {
+    mutex = wait(mutex);
+    full = wait(full);
+    empty = signal(empty);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
