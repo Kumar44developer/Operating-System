@@ -57,6 +57,9 @@ while (1) {
                 else
                     printf("\nBuffer is EMPTY! Consumer cannot consume.");
                 break;
+            ase 3:
+                printf("\nExiting...\n");
+                exit(0);
 
 
 
