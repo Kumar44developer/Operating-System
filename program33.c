@@ -18,3 +18,8 @@ void producer() {
     mutex = wait(mutex);
     full = signal(full);
     empty = wait(empty);
+   x++;
+    printf("\nProducer produces item %d", x);
+
+    mutex = signal(mutex);
+}
