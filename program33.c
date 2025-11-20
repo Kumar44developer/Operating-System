@@ -51,7 +51,12 @@ while (1) {
                 else
                     printf("\nBuffer is FULL! Producer cannot produce.");
                 break;
-
+            case 2:
+                if (mutex == 1 && full != 0)
+                    consumer();
+                else
+                    printf("\nBuffer is EMPTY! Consumer cannot consume.");
+                break;
 
 
 
