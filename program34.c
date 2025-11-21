@@ -8,3 +8,12 @@ int buffer[BUFFER_SIZE];
 int in = 0, out = 0;
 
 sem_t empty, full, mutex;
+
+void* producer(void* arg) {
+    for(int i = 1; i <= 10; i++) {
+        sem_wait(&empty);
+        sem_wait(&mutex);
+
+        buffer[in] = i;
+        printf("Produced: %d\n", i);
+        in = (in + 1) % BUFFER_SIZE;
