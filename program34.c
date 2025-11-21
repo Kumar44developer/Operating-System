@@ -41,6 +41,10 @@ void* consumer(void* arg) {
 int main() {
     pthread_t p, c;
 
+    sem_init(&empty, 0, BUFFER_SIZE);
+    sem_init(&full, 0, 0);
+    sem_init(&mutex, 0, 1);
+
 
 
 
