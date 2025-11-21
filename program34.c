@@ -38,6 +38,10 @@ void* consumer(void* arg) {
 }
 
 
+int main() {
+    pthread_t p, c;
+
+
 
 
 
