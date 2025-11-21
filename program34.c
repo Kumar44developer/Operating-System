@@ -45,7 +45,8 @@ int main() {
     sem_init(&full, 0, 0);
     sem_init(&mutex, 0, 1);
 
-
+    pthread_create(&p, NULL, producer, NULL);
+    pthread_create(&c, NULL, consumer, NULL);
 
 
 
