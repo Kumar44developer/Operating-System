@@ -49,7 +49,8 @@ int main() {
     pthread_create(&c, NULL, consumer, NULL);
 
 
-
+     pthread_join(p, NULL);
+    pthread_join(c, NULL);
 
 
 
