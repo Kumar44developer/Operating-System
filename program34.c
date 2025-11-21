@@ -17,3 +17,8 @@ void* producer(void* arg) {
         buffer[in] = i;
         printf("Produced: %d\n", i);
         in = (in + 1) % BUFFER_SIZE;
+        sem_post(&mutex);
+        sem_post(&full);
+    }
+    return NULL;
+}
