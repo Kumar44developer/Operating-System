@@ -52,6 +52,14 @@ int main() {
      pthread_join(p, NULL);
     pthread_join(c, NULL);
 
+    
+    sem_destroy(&empty);
+    sem_destroy(&full);
+    sem_destroy(&mutex);
+
+    return 0;
+}
+
 
 
 
