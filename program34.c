@@ -22,3 +22,31 @@ void* producer(void* arg) {
     }
     return NULL;
 }
+
+void* consumer(void* arg) {
+    for(int i = 1; i <= 10; i++) {
+        sem_wait(&full);
+        sem_wait(&mutex);
+
+        int item = buffer[out];
+        printf("Consumed: %d\n", item);
+        out = (out + 1) % BUFFER_SIZE;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
