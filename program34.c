@@ -31,7 +31,11 @@ void* consumer(void* arg) {
         int item = buffer[out];
         printf("Consumed: %d\n", item);
         out = (out + 1) % BUFFER_SIZE;
-
+         sem_post(&mutex);
+        sem_post(&empty);
+    }
+    return NULL;
+}
 
 
 
