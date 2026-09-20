@@ -1,7 +1,16 @@
 #include <stdio.h>
-#include <sys/wait.h>
 #include <unistd.h>
 #include <stdlib.h>
+
+#ifdef _WIN32
+#include <process.h>
+#ifndef WIFEXITED
+#define WIFEXITED(status) (1)
+#define WEXITSTATUS(status) (status)
+#endif
+#else
+#include <sys/wait.h>
+#endif
 
 int main() {
     pid_t pid = fork();

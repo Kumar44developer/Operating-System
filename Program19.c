@@ -14,5 +14,5 @@ int main() {
         printf("Parent process resumes after child completes.\n");
     }
 
-    return 0;
+    return 0;
 }

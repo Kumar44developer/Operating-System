@@ -1,0 +1,24 @@
+# Compiled Binaries & Objects
+bin/
+*.exe
+*.o
+*.out
+temp_*.exe
+
+# Test Output Files
+sample.txt
+
+# OS Generated
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / Logs
+node_modules/
+*.log

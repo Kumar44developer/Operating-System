@@ -3,6 +3,7 @@
 #include <unistd.h>      
 #include <sys/types.h>
 #include <sys/wait.h>    
+
 int main() {
     pid_t pid;
     pid = fork();
@@ -19,22 +20,7 @@ int main() {
     else {
         printf("Child Process\n");
         printf("Parent PID = %d, Child PID = %d\n", getppid(), getpid());
-       execlp("/bin/ls", ls, NULL);
-      }
+        execlp("/bin/ls", "ls", NULL);
+    }
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

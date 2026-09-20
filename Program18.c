@@ -14,5 +14,5 @@ int main() {
 
     printf("File Content: %s\n", buffer);
     close(fd);
-    return 0;
+    return 0;
 }
